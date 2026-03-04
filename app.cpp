@@ -1,26 +1,32 @@
 #include <bits/stdc++.h>
+#include "student.h"
+
 
 using namespace std;
 
 int main() {
-int x , y;
-
-cin >> x >> y;
-try
-{
-if(y == 0)
-  throw exception();  
-  else
-  cout << x / y;
-}
-
-catch(exception e)
-{
-  cout << e.what() << '\n';
-  cout <<"please review your input"<< '\n';
-}
-cout << "the program continued" << '\n';
-cout << x + y + 100 << '\n';
   
+  priority_queue<int, vector<int>, greater<int> > pq;
+
+ int n;
+ cin >> n;
+
+  long long h=0;
+
+ for(int i = 0 ; i<n ; ++i){
+  int x;
+  cin >> x;
+  pq.push(x);
+  h += x;
+  
+  if(h<0){
+    h -= pq.top();
+    pq.pop();
+  }
+
+ }
+ 
+ cout << pq.size();
+
   return 0;
 }
