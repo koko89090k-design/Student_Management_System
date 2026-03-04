@@ -1,1 +1,4 @@
 app.exe
+*.exe
+.vscode/
+tempCodeRunnerFile.cpp
