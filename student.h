@@ -7,10 +7,10 @@
 using namespace std;
 
 struct Student {
-    string id; // Unique national ID
-    string name; // Full name 
-    int year; // Academic year 
-    vector<string> enrolledCourseIds;  // List of registered courses
+    string id; 
+    string name;  
+    int year; 
+    vector<string> enrolledCourseIds;  
 };
 
 

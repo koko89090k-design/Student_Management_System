@@ -55,9 +55,10 @@ void recordGrade(vector<Course>& Courses, vector<Student>& students){
         return;
     }
 
-    // grades.push_back({studentId , grade});
+   
     c->grades.push_back({studentId , grade});
 
+    cout << "Grade recorded successfully!\n";
 
 }
 
