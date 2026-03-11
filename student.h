@@ -1,23 +1,25 @@
-#ifndef student_h
-#define student_h
+#ifndef STUDENT_H
+#define STUDENT_H
 
-#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+#include <iostream>
 
-
-using namespace std;
+struct Course; // Forward declaration
 
 struct Student {
-    string id; 
-    string name;  
-    int year; 
-    vector<string> enrolledCourseIds;  
+    std::string id;
+    std::string name;
+    int year;
+    std::vector<std::string> enrolledCourseIds;
 };
 
+void addStudent(std::vector<Student>& students);
 
-void addStudent(vector<Student>& students); 
-
-Student* findStudentById(vector<Student>& students, const string& id);
+Student* findStudentById(std::vector<Student>& students, const std::string& id);
 
 void printStudent(const Student& s);
+
+void printStudentGPA(std::vector<Student>& students, std::vector<Course>& courses);
 
 #endif

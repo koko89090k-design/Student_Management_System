@@ -1,26 +1,26 @@
-#ifndef course_h
-#define course_h
 
-#include <bits/stdc++.h>
+
+#ifndef COURSE_H
+#define COURSE_H
+
+#include <string>
+#include <vector>
+#include <iostream>
 #include "student.h"
 
-using namespace std;
-
 struct Course {
-
-string id;
-string title;
-int credit_hours;
-vector<pair<string , double>> grades;
-
+    std::string id;
+    std::string title;
+    int credit_hours;
+    std::vector<std::pair<std::string, double>> grades;
 };
 
-void addcource (vector <Course> &courses);
+void addCourse(std::vector<Course>& courses);
 
-Course * findCoursebyid(vector<Course> &Courses , const string &id);
+Course* findCourseById(std::vector<Course>& courses, const std::string& id);
 
-void recordGrade(vector<Course>& Courses, vector<Student>& students); 
+void recordGrade(std::vector<Course>& courses, std::vector<Student>& students);
 
-void printCourseReport(vector<Course>& Courses, vector<Student>& students);
+void printCourseReport(std::vector<Course>& courses, std::vector<Student>& students);
 
 #endif
