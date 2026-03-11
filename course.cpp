@@ -6,6 +6,8 @@
 void addcource (vector <Course> &courses){
     Course c;
 
+    //دخل كود الكورس
+    
     cout << "Enter Course ID: ";
     cin >> c.id;
 
