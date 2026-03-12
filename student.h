@@ -5,8 +5,7 @@
 #include <vector>
 #include <iostream>
 
-struct Course; // Forward declaration
-
+struct Course; 
 struct Student {
     std::string id;
     std::string name;
