@@ -9,22 +9,24 @@ using namespace std;
 void addStudent(vector<Student>& students) {
     Student s;
 
-    // =====  دخل ال id =====
+    // دخل id الطالب
     cout << "Enter Student ID: ";
     cin >> s.id;
 
     // نتأكد إن الـ ID مش موجود قبل كده
+
     if (findStudentById(students, s.id) != nullptr) {
         cout << "Error: Student with ID " << s.id << " already exists!\n";
         return;
     }
 
-    // ===== ادخال الاسم كامل =====
+    //دخل الاسم كامل 
     cout << "Enter Name: ";
     cin.ignore();
     getline(cin, s.name);
 
-    // =====  دخل السنه واتأكد منها=====
+    // دخل السنه وتأكد منها 
+
     cout << "Enter Year: ";
     while (!(cin >> s.year) || s.year < 1 || s.year > 7) {
         cout << "Invalid input! Enter a valid year (1-7): ";
@@ -61,8 +63,12 @@ void printStudent(const Student& s) {
 
     } else {
 
+             //بنلف على كل مادة مسجل فيها ونطبع كودها
+
         for (int i = 0; i < s.enrolledCourseIds.size(); ++i) {
             cout << s.enrolledCourseIds[i];
+
+            //فاصله بين كل رقم عشان الشكل   
 
             if (i < s.enrolledCourseIds.size() - 1) {
                 cout << ", ";
@@ -114,9 +120,11 @@ void printStudentGPA(vector<Student>& students, vector<Course>& courses) {
             }
         }
 
-        if (c == nullptr) continue;
+        if (c == nullptr)
+         continue;
 
         // ندور على درجة الطالب في الكورس ده
+        
         for (int k = 0; k < c->grades.size(); ++k) {
 
             if (c->grades[k].first == studentId) {
