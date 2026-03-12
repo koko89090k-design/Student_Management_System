@@ -155,8 +155,7 @@ void printStudentGPA(vector<Student>& students, vector<Course>& courses) {
     }
 
     if (!hasGrades) {
-        cout << RED << "No grades recorded for " << s->name 
-             << " yet." << RESET << '\n';
+        cout << RED << "No grades recorded for " << s->name << " yet." << RESET << '\n';
         return;
     }
 
